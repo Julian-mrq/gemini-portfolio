@@ -69,7 +69,7 @@ export default function App() {
             <a href="#education" className="hover:text-finance-dark transition-colors">Education</a>
             <a href="#experience" className="hover:text-finance-dark transition-colors">Professional experiences</a>
             <a href="#extra" className="hover:text-finance-dark transition-colors">Extracurricular experiences</a>
-            <a href="#projets" className="hover:text-finance-dark transition-colors">Projects</a>
+            <a href="#projects" className="hover:text-finance-dark transition-colors">Projects</a>
           </div>
           <a 
             href="#contact" 
@@ -303,24 +303,29 @@ export default function App() {
       <section id="extra" className="section-padding">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Activités Extrascolaires" 
-            subtitle="Engagement et leadership au-delà du cursus académique." 
+            title="Extracurricular experiences" 
+            subtitle="Engagement and leadership beyond the academic curriculum." 
           />
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Président Club Finance",
-                desc: "Gestion d'une association de 50 membres. Organisation de conférences avec des professionnels de la City et de Wall Street.",
+                title: "Junior Conseil UTT - Junior Entreprise",
+                desc: "Managed 6  Business Developers, created business strategies increasing client acquisition by 50%. Conducted client meetings and negotiations to secure new contracts worth €5,000. Performed market analysis, budgeting, performance reporting on commercial KPIs",
                 icon: <Trophy className="text-finance-blue" size={32} />
               },
               {
-                title: "Sport de Compétition",
-                desc: "Pratique intensive du Tennis en club. Participation à des tournois régionaux. Esprit d'équipe et résilience.",
+                title: "UTT Finance club",
+                desc: "Performed weekly macroeconomic and technical analysis, portfolio management, and newsletter writing",
                 icon: <Globe className="text-finance-blue" size={32} />
               },
               {
-                title: "Bénévolat",
-                desc: "Soutien scolaire en mathématiques pour des élèves en difficulté. Transmission de la passion pour les sciences.",
+                title: "Brigade de Sapeurs-Pompiers de Paris",
+                desc: "Trained in first aid, fire and military drills in fast-paced environments, volunteered in charity events like the Paris marathon, Journées du Patrimoine.",
+                icon: <User className="text-finance-blue" size={32} />
+              },
+              {
+                title: "Volunteering",
+                desc: "Volunteered in Le Chaînon Manquant, an association collecting unsold products to distribute them to people in the need.",
                 icon: <User className="text-finance-blue" size={32} />
               }
             ].map((item, i) => (
@@ -336,12 +341,12 @@ export default function App() {
         </div>
       </section>
 
-      {/* Projets Section */}
-      <section id="projets" className="section-padding bg-finance-dark text-white">
+      {/* projects Section */}
+      <section id="projects" className="section-padding bg-finance-dark text-white">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Projets & Réalisations" 
-            subtitle="Démonstration de compétences techniques à travers des projets concrets." 
+            title="Projects" 
+            subtitle="Application of my skills to real life projects." 
             dark
           />
           <div className="grid md:grid-cols-2 gap-8">
