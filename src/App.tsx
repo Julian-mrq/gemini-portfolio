@@ -185,7 +185,7 @@ export default function App() {
                   "Courses: corporate finance, financial analysis, modeling, business valuation, private equity",
                   "Project: built full DCF and trading comps valuation models to assess Salesforce’s value"
                 ],
-                logo: "/img/logo_dauphine.png"
+                logo: "img/logo_dauphine.png"
               },
               {
                 title: "Engineer degree",
@@ -196,7 +196,7 @@ export default function App() {
                   "Integrated preparatory classes: mathematics, physics, computer science",
                   "Project: developed AI models to optimise option pricing, preprocessed and analysed data"
                 ],
-                logo: "/img/logo_utt.png"
+                logo: "img/logo_utt.png"
               }
             ].map((edu, i) => (
               <Card key={i} className="flex flex-col md:flex-row gap-6 items-start">
@@ -243,13 +243,13 @@ export default function App() {
                   "Analysed around 400,000 credit data to extract key risk and financial insights from credit reports",
                   "Presented monthly decks to senior management for strategic decision-making"
                 ],
-                logo: "https://picsum.photos/seed/bank/100/100",
+                logo: "img/logo_bnp.png",
                 skills: ["Python", "Excel", "SQL", "Data preprocessing", "Model optimisation"]
               },
               {
-                role: "Consultant Data Junior",
-                company: "Cabinet de Conseil Stratégique",
-                period: "2023",
+                role: "Strategy and Operations Intern",
+                company: "Pretto",
+                period: "July 2023 - Dec. 2023",
                 bullets: [
                   "I was the bridge between real estate brokers and the Tech team, in order to manager partnershipsp with banks and update the real estate market informations",
                   "Analysed mortgage portfolios and client conversion for strategic decision-making",
@@ -257,7 +257,7 @@ export default function App() {
                   "Streamlined the company database (20M+ rows) using SQL improving reliability to nearly 100%",
                   "Collaborated with banking partners to improve product positioning and customer offers"
                 ],
-                logo: "https://picsum.photos/seed/consulting/100/100",
+                logo: "img/logo_pretto.png",
                 skills: ["SQL", "Excel", "Python", "Database restructuring"]
               }
             ].map((exp, i) => (
