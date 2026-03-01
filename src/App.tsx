@@ -225,37 +225,40 @@ export default function App() {
       </section>
 
       {/* Expériences Section */}
-      <section id="experience" className="section-padding bg-slate-100/30">
+      <section id="experience" className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Expériences Professionnelles" 
-            subtitle="Mise en pratique des compétences analytiques en milieu financier." 
+            title="Professional experiences" 
+            subtitle="My work experience in data science, finance and business analysis." 
           />
           <div className="space-y-8">
             {[
               {
-                role: "Analyste Quantitatif (Stage)",
-                company: "Banque d'Investissement",
-                period: "Été 2024",
+                role: "Data Science Intern",
+                company: "BNP Paribas CIB",
+                period: "Feb. 2025 - July. 2025",
                 bullets: [
-                  "Développement d'outils de pricing pour options exotiques en C++",
-                  "Automatisation de rapports de risques via Python et SQL",
-                  "Collaboration quotidienne avec le desk de trading et les risk managers"
+                  "In the Tech department of Global Banking, I was in charge of developping models for strategic decision-making in the Corporate Credits division",
+                  "Built and optimised machine learning models to identify financial anomalies in credit data, increasing outlier detection by 90%",
+                  "Analysed around 400,000 credit data to extract key risk and financial insights from credit reports",
+                  "Presented monthly decks to senior management for strategic decision-making"
                 ],
                 logo: "https://picsum.photos/seed/bank/100/100",
-                skills: ["Python", "VBA", "Stochastic Calculus"]
+                skills: ["Python", "Excel", "SQL", "Data preprocessing", "Model optimisation"]
               },
               {
                 role: "Consultant Data Junior",
                 company: "Cabinet de Conseil Stratégique",
                 period: "2023",
                 bullets: [
-                  "Analyse de données massives pour l'optimisation de processus industriels",
-                  "Création de modèles prédictifs et dashboards décisionnels sous Tableau",
-                  "Présentation des résultats stratégiques aux clients finaux"
+                  "I was the bridge between real estate brokers and the Tech team, in order to manager partnershipsp with banks and update the real estate market informations",
+                  "Analysed mortgage portfolios and client conversion for strategic decision-making",
+                  "Built KPI dashboards (Excel, Looker Studio) tracking sales and mortgage flows for top management",
+                  "Streamlined the company database (20M+ rows) using SQL improving reliability to nearly 100%",
+                  "Collaborated with banking partners to improve product positioning and customer offers"
                 ],
                 logo: "https://picsum.photos/seed/consulting/100/100",
-                skills: ["SQL", "Tableau", "Machine Learning"]
+                skills: ["SQL", "Excel", "Python", "Database restructuring"]
               }
             ].map((exp, i) => (
               <motion.div 
