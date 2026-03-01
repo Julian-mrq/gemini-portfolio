@@ -65,11 +65,11 @@ export default function App() {
             <span className="font-bold text-xl tracking-tight text-finance-dark">PORTFOLIO</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-semibold text-finance-blue uppercase tracking-wider">
-            <a href="#about" className="hover:text-finance-dark transition-colors">Accueil</a>
-            <a href="#formation" className="hover:text-finance-dark transition-colors">Formation</a>
-            <a href="#experience" className="hover:text-finance-dark transition-colors">Expériences</a>
-            <a href="#extra" className="hover:text-finance-dark transition-colors">Activités</a>
-            <a href="#projets" className="hover:text-finance-dark transition-colors">Projets</a>
+            <a href="#about" className="hover:text-finance-dark transition-colors">Home</a>
+            <a href="#formation" className="hover:text-finance-dark transition-colors">Education</a>
+            <a href="#experience" className="hover:text-finance-dark transition-colors">Professional experiences</a>
+            <a href="#extra" className="hover:text-finance-dark transition-colors">Extracurricular experiences</a>
+            <a href="#projets" className="hover:text-finance-dark transition-colors">Projects</a>
           </div>
           <a 
             href="#contact" 
@@ -102,9 +102,9 @@ export default function App() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl flex-1"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-finance-accent/20 border border-finance-accent/30 text-white text-xs font-bold uppercase tracking-widest mb-8">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-finance-accent/20 border border-finance-accent/30 text-white text-xs font-bold uppercase tracking-widest mb-8">
               Ingénieur & Expert Finance
-            </div>
+            </div> */}
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
               L'Analyse <span className="text-finance-accent">Technique</span> au service de la <span className="text-finance-accent">Finance</span>
             </h1>
