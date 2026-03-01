@@ -102,9 +102,9 @@ export default function App() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl flex-1"
           >
-            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-finance-accent/20 border border-finance-accent/30 text-white text-xs font-bold uppercase tracking-widest mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-finance-accent/20 border border-finance-accent/30 text-white text-xs font-bold uppercase tracking-widest mb-8">
               Ingénieur & Expert Finance
-            </div> */}
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
               L'Analyse <span className="text-finance-accent">Technique</span> au service de la <span className="text-finance-accent">Finance</span>
             </h1>
