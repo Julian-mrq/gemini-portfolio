@@ -104,9 +104,9 @@ export default function App() {
           >
             
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-              <span className="text-finance-accent">Engineering</span>
-              x
-              <span className="text-finance-accent">Finance</span>
+              <span className="block text-finance-accent">Engineering</span>
+              <span className="block">x</span>
+              <span className="block text-finance-accent">Finance</span>
               {/* L'Analyse <span className="text-finance-accent">Technique</span> au service de la <span className="text-finance-accent">Finance</span> */}
             </h1>
             
@@ -117,9 +117,20 @@ export default function App() {
               <a href="#formation" className="bg-white text-finance-dark px-8 py-4 rounded-xl font-bold hover:bg-finance-light transition-all flex items-center gap-2 shadow-xl">
                 See my journey <ChevronRight size={18} />
               </a>
-              <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium cursor-pointer hover:bg-white/20 transition-all">
-                <FileText size={20} className="text-finance-accent" /> Download CV
-              </div>
+              <a
+                href="../Julian_Marques_CV.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 px-6 py-4 rounded-xl 
+                bg-white/10 backdrop-blur-md border border-white/20 
+                text-white font-medium 
+                hover:bg-white/20 hover:scale-105 active:scale-95 
+                transition-all duration-300"
+              >
+                <FileText size={20} className="text-finance-accent" />
+                Download CV
+              </a>
             </div>
           </motion.div>
 
