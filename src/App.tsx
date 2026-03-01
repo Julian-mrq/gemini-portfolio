@@ -12,20 +12,16 @@ import {
   Code2,
   LineChart,
   Globe,
-  User,
-  Layers,
-  Phone,
-  MapPin,
-  FileText
+  User
 } from 'lucide-react';
 
-const SectionHeader = ({ title, subtitle, dark = false }: { title: string; subtitle?: string; dark?: boolean }) => (
+const SectionHeader = ({ title, subtitle }: { title: string; subtitle?: string }) => (
   <div className="mb-12">
     <motion.h2 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`text-3xl font-bold tracking-tight ${dark ? 'text-white' : 'text-slate-900'} sm:text-4xl mb-4`}
+      className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4"
     >
       {title}
     </motion.h2>
@@ -35,7 +31,7 @@ const SectionHeader = ({ title, subtitle, dark = false }: { title: string; subti
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className={`text-lg ${dark ? 'text-slate-300' : 'text-slate-600'} max-w-2xl`}
+        className="text-lg text-slate-600 max-w-2xl"
       >
         {subtitle}
       </motion.p>
@@ -43,10 +39,10 @@ const SectionHeader = ({ title, subtitle, dark = false }: { title: string; subti
   </div>
 );
 
-const Card = ({ children, className = "" }: { children: React.ReactNode; className?: string; key?: React.Key }) => (
+const Card = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
   <motion.div 
     whileHover={{ y: -4 }}
-    className={`bg-white rounded-xl border border-slate-200 p-8 shadow-sm transition-all hover:shadow-md ${className}`}
+    className={`bg-white rounded-2xl border border-slate-200 p-8 shadow-sm transition-all hover:shadow-md ${className}`}
   >
     {children}
   </motion.div>
@@ -54,198 +50,149 @@ const Card = ({ children, className = "" }: { children: React.ReactNode; classNa
 
 export default function App() {
   return (
-    <div className="min-h-screen font-sans bg-finance-light/30">
+    <div className="min-h-screen font-sans">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 glass border-b border-slate-200/50">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-finance-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">
-              P
-            </div>
-            <span className="font-bold text-xl tracking-tight text-finance-dark">PORTFOLIO</span>
-          </div>
-          <div className="hidden md:flex gap-8 text-sm font-semibold text-finance-blue uppercase tracking-wider">
-            <a href="#about" className="hover:text-finance-dark transition-colors">Accueil</a>
-            <a href="#formation" className="hover:text-finance-dark transition-colors">Formation</a>
-            <a href="#experience" className="hover:text-finance-dark transition-colors">Expériences</a>
-            <a href="#extra" className="hover:text-finance-dark transition-colors">Activités</a>
-            <a href="#projets" className="hover:text-finance-dark transition-colors">Projets</a>
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+          <span className="font-mono font-bold text-xl tracking-tighter">PORTFOLIO.</span>
+          <div className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+            <a href="#about" className="hover:text-emerald-600 transition-colors">About</a>
+            <a href="#education" className="hover:text-emerald-600 transition-colors">Education</a>
+            <a href="#experience" className="hover:text-emerald-600 transition-colors">Experience</a>
+            <a href="#extra" className="hover:text-emerald-600 transition-colors">Extra-curricular</a>
           </div>
           <a 
             href="#contact" 
-            className="bg-finance-dark text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-finance-blue transition-all shadow-lg shadow-finance-dark/10"
+            className="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-all"
           >
-            Contact
+            Get in touch
           </a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="about" className="relative h-screen flex items-center overflow-hidden">
-        {/* Background Image with Finance Theme */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
-            alt="Finance Background" 
-            className="w-full h-full object-cover grayscale-[0.4] opacity-90"
-            referrerPolicy="no-referrer"
-          />
-          {/* Muted Blue-Gray Transparent Overlay */}
-          <div className="absolute inset-0 bg-finance-dark/70 backdrop-blur-[1px]"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-finance-dark/95 via-finance-dark/60 to-transparent"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full flex flex-col md:flex-row items-center gap-16">
+      <section id="about" className="pt-32 pb-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl flex-1"
+            transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-finance-accent/20 border border-finance-accent/30 text-white text-xs font-bold uppercase tracking-widest mb-8">
-              Ingénieur & Expert Finance
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              Available for opportunities
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-              L'Analyse <span className="text-finance-accent">Technique</span> au service de la <span className="text-finance-accent">Finance</span>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1]">
+              Bridging <span className="text-emerald-600">Engineering</span> & <span className="text-emerald-600">Finance</span>
             </h1>
-            <p className="text-xl text-slate-200 mb-10 leading-relaxed font-light">
-              Diplômé en ingénierie et étudiant en Master Finance. 
-              Je combine rigueur mathématique et expertise financière pour modéliser 
-              les marchés de demain.
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
+              Engineering graduate currently pursuing a Master's in Finance. 
+              Passionate about quantitative analysis, financial modeling, and 
+              leveraging technical expertise to solve complex financial challenges.
             </p>
-            <div className="flex flex-wrap gap-5">
-              <a href="#formation" className="bg-white text-finance-dark px-8 py-4 rounded-xl font-bold hover:bg-finance-light transition-all flex items-center gap-2 shadow-xl">
-                Voir mon parcours <ChevronRight size={18} />
-              </a>
-              <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium cursor-pointer hover:bg-white/20 transition-all">
-                <FileText size={20} className="text-finance-accent" /> Télécharger CV
+            <div className="flex flex-wrap gap-4">
+              <div className="flex items-center gap-2 text-slate-500 font-mono text-sm">
+                <Code2 size={18} /> Python, SQL, C++
+              </div>
+              <div className="flex items-center gap-2 text-slate-500 font-mono text-sm">
+                <LineChart size={18} /> Financial Modeling, VBA
               </div>
             </div>
           </motion.div>
-
-          {/* Profile Photo - Harmonized with Hero */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="relative hidden lg:block"
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
           >
-            <div className="w-72 h-96 rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl relative z-10">
+            <div className="aspect-square rounded-3xl overflow-hidden bg-slate-200 relative z-10">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" 
-                alt="Profile" 
-                className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                src="https://picsum.photos/seed/professional/800/800" 
+                alt="Professional Portrait" 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-finance-accent/20 rounded-full blur-2xl"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-finance-blue/20 rounded-full blur-3xl"></div>
-            <div className="absolute inset-0 border-2 border-finance-accent/30 rounded-3xl translate-x-4 translate-y-4 -z-0"></div>
+            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-emerald-100 rounded-full -z-0 blur-3xl opacity-60"></div>
+            <div className="absolute -top-6 -left-6 w-48 h-48 bg-blue-100 rounded-full -z-0 blur-3xl opacity-60"></div>
           </motion.div>
         </div>
-        
-        {/* Scroll Indicator */}
-        <motion.div 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-white/50"
-        >
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
-            <div className="w-1 h-2 bg-white rounded-full"></div>
-          </div>
-        </motion.div>
       </section>
 
-      {/* Formation Section */}
-      <section id="formation" className="section-padding">
+      {/* Education Section */}
+      <section id="education" className="section-padding bg-slate-100/50">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Formation Académique" 
-            subtitle="Un double cursus exigeant alliant ingénierie et finance de marché." 
+            title="Academic Journey" 
+            subtitle="Combining rigorous technical training with advanced financial theory." 
           />
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Master in Finance",
-                school: "Grande École de Commerce",
-                period: "2024 — Présent",
-                bullets: [
-                  "Spécialisation en Finance de Marché et Gestion d'Actifs",
-                  "Focus sur les produits dérivés et la gestion de portefeuille",
-                  "Modélisation stochastique appliquée aux marchés financiers"
-                ],
-                logo: "https://picsum.photos/seed/school1/100/100"
-              },
-              {
-                title: "Diplôme d'Ingénieur",
-                school: "École Nationale Supérieure",
-                period: "2020 — 2024",
-                bullets: [
-                  "Majeure Mathématiques Appliquées et Systèmes",
-                  "Mention Très Bien (Top 5% de la promotion)",
-                  "Expertise en algorithmique, optimisation et calcul scientifique"
-                ],
-                logo: "https://picsum.photos/seed/school2/100/100"
-              }
-            ].map((edu, i) => (
-              <Card key={i} className="flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 border border-slate-100 shadow-sm">
-                  <img src={edu.logo} alt={edu.school} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-bold text-finance-blue uppercase tracking-widest">{edu.period}</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-finance-dark mb-1">{edu.title}</h3>
-                  <p className="text-finance-blue font-semibold mb-4">{edu.school}</p>
-                  <ul className="space-y-2">
-                    {edu.bullets.map((bullet, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-slate-600 leading-relaxed">
-                        <ChevronRight size={14} className="mt-1 text-finance-blue shrink-0" />
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Card>
-            ))}
+            <Card>
+              <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-6">
+                <LineChart size={24} />
+              </div>
+              <span className="text-sm font-bold text-emerald-600 uppercase tracking-widest">Current</span>
+              <h3 className="text-2xl font-bold mt-2 mb-1">Master in Finance</h3>
+              <p className="text-slate-500 font-medium mb-4">Top-tier Business School • 2024 — Present</p>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-2">
+                  <ChevronRight size={18} className="text-emerald-500 mt-1 shrink-0" />
+                  <span>Specializing in Quantitative Finance and Asset Management.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight size={18} className="text-emerald-500 mt-1 shrink-0" />
+                  <span>Relevant Coursework: Derivatives Pricing, Portfolio Theory, Corporate Finance.</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card>
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6">
+                <GraduationCap size={24} />
+              </div>
+              <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">Completed</span>
+              <h3 className="text-2xl font-bold mt-2 mb-1">B.S. in Engineering</h3>
+              <p className="text-slate-500 font-medium mb-4">Leading Technical University • 2020 — 2024</p>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-2">
+                  <ChevronRight size={18} className="text-blue-500 mt-1 shrink-0" />
+                  <span>Graduated with Honors. Focused on Systems Engineering and Applied Math.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight size={18} className="text-blue-500 mt-1 shrink-0" />
+                  <span>Thesis: Optimization algorithms for large-scale logistics networks.</span>
+                </li>
+              </ul>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Expériences Section */}
-      <section id="experience" className="section-padding bg-slate-100/30">
+      {/* Experience Section */}
+      <section id="experience" className="section-padding">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Expériences Professionnelles" 
-            subtitle="Mise en pratique des compétences analytiques en milieu financier." 
+            title="Professional Experience" 
+            subtitle="Applying analytical skills in real-world environments." 
           />
-          <div className="space-y-8">
+          <div className="space-y-6">
             {[
               {
-                role: "Analyste Quantitatif (Stage)",
-                company: "Banque d'Investissement",
-                period: "Été 2024",
-                bullets: [
-                  "Développement d'outils de pricing pour options exotiques en C++",
-                  "Automatisation de rapports de risques via Python et SQL",
-                  "Collaboration quotidienne avec le desk de trading et les risk managers"
-                ],
-                logo: "https://picsum.photos/seed/bank/100/100",
-                skills: ["Python", "VBA", "Stochastic Calculus"]
+                role: "Quantitative Research Intern",
+                company: "Global Asset Management Firm",
+                period: "Summer 2024",
+                desc: "Developed automated trading signals using Python and backtested strategies across multiple asset classes. Improved model accuracy by 15% through feature engineering.",
+                icon: <LineChart size={20} />
               },
               {
-                role: "Consultant Data Junior",
-                company: "Cabinet de Conseil Stratégique",
-                period: "2023",
-                bullets: [
-                  "Analyse de données massives pour l'optimisation de processus industriels",
-                  "Création de modèles prédictifs et dashboards décisionnels sous Tableau",
-                  "Présentation des résultats stratégiques aux clients finaux"
-                ],
-                logo: "https://picsum.photos/seed/consulting/100/100",
-                skills: ["SQL", "Tableau", "Machine Learning"]
+                role: "Data Analyst Intern",
+                company: "Tech Consulting Group",
+                period: "Winter 2023",
+                desc: "Analyzed supply chain data for Fortune 500 clients. Built interactive dashboards in Tableau and optimized SQL queries for faster data retrieval.",
+                icon: <Code2 size={20} />
               }
             ].map((exp, i) => (
               <motion.div 
@@ -253,32 +200,19 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl border border-slate-200 flex flex-col md:flex-row gap-8 hover:shadow-lg transition-all group"
+                transition={{ delay: i * 0.1 }}
+                className="group flex flex-col md:flex-row gap-6 p-8 rounded-2xl border border-slate-200 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all"
               >
-                <div className="w-24 h-24 rounded-2xl overflow-hidden border border-slate-100 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                  <img src={exp.logo} alt={exp.company} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-emerald-100 group-hover:text-emerald-600 transition-colors shrink-0">
+                  {exp.icon}
                 </div>
                 <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
-                    <h3 className="text-2xl font-bold text-finance-dark">{exp.role}</h3>
-                    <span className="text-sm font-mono font-bold text-finance-blue bg-finance-light px-3 py-1 rounded-full">{exp.period}</span>
+                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                    <h3 className="text-xl font-bold text-slate-900">{exp.role}</h3>
+                    <span className="text-sm font-mono text-slate-500">{exp.period}</span>
                   </div>
-                  <p className="text-lg text-finance-blue font-bold mb-4">{exp.company}</p>
-                  <ul className="space-y-2 mb-6">
-                    {exp.bullets.map((bullet, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-slate-600 leading-relaxed">
-                        <ChevronRight size={14} className="mt-1 text-finance-blue shrink-0" />
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill, j) => (
-                      <span key={j} className="text-xs font-bold text-finance-blue/60 bg-slate-100 px-3 py-1 rounded-md uppercase tracking-wider">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-emerald-600 font-medium mb-4">{exp.company}</p>
+                  <p className="text-slate-600 leading-relaxed">{exp.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -286,156 +220,84 @@ export default function App() {
         </div>
       </section>
 
-      {/* Activités Section */}
-      <section id="extra" className="section-padding">
+      {/* Extra-curricular Section */}
+      <section id="extra" className="section-padding bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Activités Extrascolaires" 
-            subtitle="Engagement et leadership au-delà du cursus académique." 
+            title="Beyond the Classroom" 
+            subtitle="Leadership and impact through extra-curricular activities." 
           />
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Président Club Finance",
-                desc: "Gestion d'une association de 50 membres. Organisation de conférences avec des professionnels de la City et de Wall Street.",
-                icon: <Trophy className="text-finance-blue" size={32} />
+                title: "Finance Society President",
+                desc: "Leading a team of 20 to organize workshops, guest speaker events, and a regional stock pitch competition.",
+                icon: <Trophy className="text-emerald-400" />
               },
               {
-                title: "Sport de Compétition",
-                desc: "Pratique intensive du Tennis en club. Participation à des tournois régionaux. Esprit d'équipe et résilience.",
-                icon: <Globe className="text-finance-blue" size={32} />
+                title: "Open Source Contributor",
+                desc: "Actively contributing to financial analysis libraries on GitHub. Passionate about accessible data tools.",
+                icon: <Github className="text-emerald-400" />
               },
               {
-                title: "Bénévolat",
-                desc: "Soutien scolaire en mathématiques pour des élèves en difficulté. Transmission de la passion pour les sciences.",
-                icon: <User className="text-finance-blue" size={32} />
+                title: "Volunteer Tutor",
+                desc: "Teaching advanced mathematics and physics to high school students from underprivileged backgrounds.",
+                icon: <Globe className="text-emerald-400" />
               }
             ].map((item, i) => (
-              <Card key={i} className="text-center flex flex-col items-center">
-                <div className="w-16 h-16 bg-finance-light rounded-full flex items-center justify-center mb-6">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold text-finance-dark mb-4">{item.title}</h3>
-                <p className="text-slate-600">{item.desc}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projets Section */}
-      <section id="projets" className="section-padding bg-finance-dark text-white">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeader 
-            title="Projets & Réalisations" 
-            subtitle="Démonstration de compétences techniques à travers des projets concrets." 
-            dark
-          />
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Modèle de Black-Scholes étendu",
-                desc: "Implémentation en C++ d'un moteur de pricing d'options avec intégration de la volatilité locale.",
-                tech: ["C++", "Numerical Methods"],
-                link: "#"
-              },
-              {
-                title: "Dashboard de Risque Temps Réel",
-                desc: "Application web visualisant l'exposition au risque d'un portefeuille d'actions via des APIs financières.",
-                tech: ["React", "Python", "WebSockets"],
-                link: "#"
-              }
-            ].map((project, i) => (
               <motion.div 
                 key={i}
-                whileHover={{ scale: 1.02 }}
-                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex flex-col justify-between"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
               >
-                <div>
-                  <div className="w-12 h-12 bg-finance-accent/20 rounded-lg flex items-center justify-center mb-6">
-                    <Layers className="text-finance-accent" size={24} />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                  <p className="text-slate-300 mb-6 leading-relaxed">{project.desc}</p>
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {project.tech.map((t, j) => (
-                      <span key={j} className="text-[10px] font-bold text-finance-accent bg-white/10 px-2 py-1 rounded uppercase tracking-widest">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <a href={project.link} className="inline-flex items-center gap-2 text-finance-accent font-bold hover:text-white transition-colors">
-                  Voir le projet <ExternalLink size={16} />
-                </a>
+                <div className="mb-6">{item.icon}</div>
+                <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                <p className="text-slate-400 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section - Simplified */}
-      <section id="contact" className="section-padding bg-finance-light/20">
-        <div className="max-w-7xl mx-auto text-center">
+      {/* Contact Section */}
+      <section id="contact" className="section-padding">
+        <div className="max-w-3xl mx-auto text-center">
           <SectionHeader 
-            title="Me Contacter" 
-            subtitle="N'hésitez pas à me rejoindre sur mes réseaux professionnels ou par email." 
+            title="Let's Connect" 
+            subtitle="I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions." 
           />
-          
-          <div className="flex flex-wrap justify-center gap-12 mt-12">
-            <motion.a 
-              whileHover={{ y: -5 }}
-              href="mailto:contact@example.com" 
-              className="flex flex-col items-center gap-4 group"
+          <div className="flex flex-col md:flex-row justify-center gap-6 mt-12">
+            <a 
+              href="mailto:hello@example.com" 
+              className="flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg shadow-slate-200"
             >
-              <div className="w-24 h-24 rounded-3xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-finance-blue group-hover:text-finance-dark group-hover:border-finance-accent transition-all group-hover:shadow-xl group-hover:shadow-finance-dark/5">
-                <Mail size={40} />
-              </div>
-              <span className="font-bold text-finance-blue group-hover:text-finance-dark transition-colors tracking-widest uppercase text-xs">Email</span>
-            </motion.a>
-
-            <motion.a 
-              whileHover={{ y: -5 }}
-              href="https://linkedin.com" 
-              target="_blank"
-              className="flex flex-col items-center gap-4 group"
-            >
-              <div className="w-24 h-24 rounded-3xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-finance-blue group-hover:text-finance-dark group-hover:border-finance-accent transition-all group-hover:shadow-xl group-hover:shadow-finance-dark/5">
-                <Linkedin size={40} />
-              </div>
-              <span className="font-bold text-finance-blue group-hover:text-finance-dark transition-colors tracking-widest uppercase text-xs">LinkedIn</span>
-            </motion.a>
-
-            <motion.a 
-              whileHover={{ y: -5 }}
-              href="https://github.com" 
-              target="_blank"
-              className="flex flex-col items-center gap-4 group"
-            >
-              <div className="w-24 h-24 rounded-3xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-finance-blue group-hover:text-finance-dark group-hover:border-finance-accent transition-all group-hover:shadow-xl group-hover:shadow-finance-dark/5">
-                <Github size={40} />
-              </div>
-              <span className="font-bold text-finance-blue group-hover:text-finance-dark transition-colors tracking-widest uppercase text-xs">GitHub</span>
-            </motion.a>
+              <Mail size={20} />
+              Email Me
+            </a>
+            <div className="flex justify-center gap-4">
+              <a href="#" className="w-14 h-14 rounded-2xl border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-all">
+                <Linkedin size={24} />
+              </a>
+              <a href="#" className="w-14 h-14 rounded-2xl border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-all">
+                <Github size={24} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-slate-200 bg-white">
+      <footer className="py-12 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-finance-dark rounded flex items-center justify-center text-white font-bold text-sm">
-              P
-            </div>
-            <span className="font-bold text-lg tracking-tight text-finance-dark">PORTFOLIO</span>
-          </div>
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Portfolio Professionnel. Tous droits réservés.
+            © {new Date().getFullYear()} Professional Portfolio. Built with React & Tailwind.
           </p>
-          <div className="flex gap-8 text-sm font-bold text-slate-400">
-            <a href="#" className="hover:text-finance-dark transition-colors uppercase tracking-widest">LinkedIn</a>
-            <a href="#" className="hover:text-finance-dark transition-colors uppercase tracking-widest">GitHub</a>
+          <div className="flex gap-8 text-sm font-medium text-slate-400">
+            <a href="#" className="hover:text-slate-900 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-slate-900 transition-colors">Terms of Service</a>
           </div>
         </div>
       </footer>
