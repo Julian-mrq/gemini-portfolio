@@ -142,8 +142,13 @@ export default function App() {
             className="relative hidden lg:block"
           >
             <div className="w-72 h-96 rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl relative z-10">
+              <a 
+                href="/img/photo_CV2.png" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              ></a>
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" 
+                // src="/img/photo_CV2.png" 
                 alt="Profile" 
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
