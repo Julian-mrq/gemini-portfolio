@@ -66,7 +66,7 @@ export default function App() {
           </div>
           <div className="hidden md:flex gap-8 text-sm font-semibold text-finance-blue uppercase tracking-wider">
             <a href="#about" className="hover:text-finance-dark transition-colors">Home</a>
-            <a href="#formation" className="hover:text-finance-dark transition-colors">Education</a>
+            <a href="#education" className="hover:text-finance-dark transition-colors">Education</a>
             <a href="#experience" className="hover:text-finance-dark transition-colors">Professional experiences</a>
             <a href="#extra" className="hover:text-finance-dark transition-colors">Extracurricular experiences</a>
             <a href="#projets" className="hover:text-finance-dark transition-colors">Projects</a>
@@ -114,7 +114,7 @@ export default function App() {
               Portfolio of an engineering graduate specialized in data science, transitioning into corporate finance. Explore my professional experience, AI projects, and academic journey.
             </p>
             <div className="flex flex-wrap gap-5">
-              <a href="#formation" className="bg-white text-finance-dark px-8 py-4 rounded-xl font-bold hover:bg-finance-light transition-all flex items-center gap-2 shadow-xl">
+              <a href="#education" className="bg-white text-finance-dark px-8 py-4 rounded-xl font-bold hover:bg-finance-light transition-all flex items-center gap-2 shadow-xl">
                 See my journey <ChevronRight size={18} />
               </a>
               <a
@@ -168,36 +168,35 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* Formation Section */}
-      <section id="formation" className="section-padding">
+      {/* education Section */}
+      <section id="education" className="section-padding">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Formation Académique" 
-            subtitle="Un double cursus exigeant alliant ingénierie et finance de marché." 
+            title="Education" 
+            subtitle="Double degree in engineering and finance to complete my academic background." 
           />
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
                 title: "Master in Finance",
-                school: "Grande École de Commerce",
-                period: "2024 — Présent",
+                school: "Université Paris Dauphine - PSL",
+                period: "Sept. 2025 — June 2028",
                 bullets: [
-                  "Spécialisation en Finance de Marché et Gestion d'Actifs",
-                  "Focus sur les produits dérivés et la gestion de portefeuille",
-                  "Modélisation stochastique appliquée aux marchés financiers"
+                  "Courses: corporate finance, financial analysis, modeling, business valuation, private equity",
+                  "Project: built full DCF and trading comps valuation models to assess Salesforce’s value"
                 ],
-                logo: "https://picsum.photos/seed/school1/100/100"
+                logo: "/img/logo_dauphine.png"
               },
               {
-                title: "Diplôme d'Ingénieur",
-                school: "École Nationale Supérieure",
-                period: "2020 — 2024",
+                title: "Engineer degree",
+                school: "Université de Technologie de Troyes (UTT)",
+                period: "2020 — 2025",
                 bullets: [
-                  "Majeure Mathématiques Appliquées et Systèmes",
-                  "Mention Très Bien (Top 5% de la promotion)",
-                  "Expertise en algorithmique, optimisation et calcul scientifique"
+                  "Major in data science: machine and deep learning, statistics, data modeling",
+                  "Integrated preparatory classes: mathematics, physics, computer science",
+                  "Project: developed AI models to optimise option pricing, preprocessed and analysed data"
                 ],
-                logo: "https://picsum.photos/seed/school2/100/100"
+                logo: "/img/logo_utt.png"
               }
             ].map((edu, i) => (
               <Card key={i} className="flex flex-col md:flex-row gap-6 items-start">
