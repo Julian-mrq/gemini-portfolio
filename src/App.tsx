@@ -143,7 +143,7 @@ export default function App() {
           >
             <div className="w-72 h-96 rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl relative z-10">
               <img 
-                src="/img/photo_CV2.png" 
+                src="public/img/photo_CV2.png" 
                 alt="Julian Marques" 
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                 // referrerPolicy="no-referrer"
