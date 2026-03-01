@@ -102,23 +102,23 @@ export default function App() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl flex-1"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-finance-accent/20 border border-finance-accent/30 text-white text-xs font-bold uppercase tracking-widest mb-8">
-              Ingénieur & Expert Finance
-            </div>
+            
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-              L'Analyse <span className="text-finance-accent">Technique</span> au service de la <span className="text-finance-accent">Finance</span>
+              <span className="text-finance-accent">Engineering</span>
+              x
+              <span className="text-finance-accent">Finance</span>
+              {/* L'Analyse <span className="text-finance-accent">Technique</span> au service de la <span className="text-finance-accent">Finance</span> */}
             </h1>
+            
             <p className="text-xl text-slate-200 mb-10 leading-relaxed font-light">
-              Diplômé en ingénierie et étudiant en Master Finance. 
-              Je combine rigueur mathématique et expertise financière pour modéliser 
-              les marchés de demain.
+              Portfolio of an engineering graduate specialized in data science, transitioning into corporate finance. Explore my professional experience, AI projects, and academic journey.
             </p>
             <div className="flex flex-wrap gap-5">
               <a href="#formation" className="bg-white text-finance-dark px-8 py-4 rounded-xl font-bold hover:bg-finance-light transition-all flex items-center gap-2 shadow-xl">
-                Voir mon parcours <ChevronRight size={18} />
+                See my journey <ChevronRight size={18} />
               </a>
               <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium cursor-pointer hover:bg-white/20 transition-all">
-                <FileText size={20} className="text-finance-accent" /> Télécharger CV
+                <FileText size={20} className="text-finance-accent" /> Download CV
               </div>
             </div>
           </motion.div>
