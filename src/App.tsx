@@ -279,7 +279,7 @@ export default function App() {
                 company: "BNP Paribas CIB",
                 period: "Feb. 2025 - July. 2025",
                 bullets: [
-                  "In the Tech department of Global Banking, I was in charge of developping models for strategic decision-making in the Corporate Credits division",
+                  "<strong>In the Tech department of Global Banking, I was in charge of developping models for strategic decision-making in the Corporate Credits division</strong>",
                   "Built and optimised machine learning models to identify financial anomalies in credit data, increasing outlier detection by 90%",
                   "Analysed around 400,000 credit data to extract key risk and financial insights from credit reports",
                   "Presented monthly decks to senior management for strategic decision-making"
