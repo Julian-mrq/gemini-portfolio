@@ -59,28 +59,28 @@ export default function App() {
 
   const projects = [
     {
-      title: "Modèle de Black-Scholes étendu",
-      desc: "Implémentation en C++ d'un moteur de pricing d'options avec intégration de la volatilité locale.",
-      tech: ["C++", "Numerical Methods"],
+      title: "Valuation models on Salesforce",
+      desc: "Built full DCF (5 years projection) and trading comps valuation models to assess Salesforce’s value and make investment decisions.",
+      tech: ["Financial analysis", "Financial modelling"],
       link: "#"
     },
     {
-      title: "Dashboard de Risque Temps Réel",
-      desc: "Application web visualisant l'exposition au risque d'un portefeuille d'actions via des APIs financières.",
-      tech: ["React", "Python", "WebSockets"],
-      link: "#"
+      title: "Option Pricing with AI",
+      desc: "Retrieved, preprocessed and analysed financial stocks data. Developed AI models to optimise European option pricing.",
+      tech: ["Python", "Machine Learning", "Deep Learning"],
+      link: "https://github.com/Julian-mrq/Option_pricing"
     },
     {
-      title: "Optimisation de Portefeuille",
-      desc: "Algorithme de frontière efficiente de Markowitz développé pour la gestion d'actifs institutionnels.",
+      title: "Portfolio Optimisation",
+      desc: "Developed a python-based app to visualise and optimise a stock portfolio using Modern Portfolio Theory.",
       tech: ["Python", "SciPy", "Matplotlib"],
-      link: "#"
+      link: "https://github.com/Julian-mrq/Portfolio_optimization"
     },
     {
-      title: "Analyse Sentiment Marché",
-      desc: "Outil de NLP analysant les flux Twitter et Reuters pour prédire les mouvements de court terme.",
-      tech: ["NLP", "TensorFlow", "API"],
-      link: "#"
+      title: "Stock Prediction Models",
+      desc: "Developed supervised Machine Learning models to predict stock prices.",
+      tech: ["Python", "Market finance"],
+      link: "https://github.com/Julian-mrq/AI-trading-bots"
     }
   ];
 
@@ -106,11 +106,6 @@ export default function App() {
             <span className="font-bold text-xl tracking-tight text-finance-dark">PORTFOLIO</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-semibold text-finance-blue uppercase tracking-wider">
-            {/* <a href="#about" className="hover:text-finance-dark transition-colors">Accueil</a>
-            <a href="#education" className="hover:text-finance-dark transition-colors">education</a>
-            <a href="#experience" className="hover:text-finance-dark transition-colors">Expériences</a>
-            <a href="#extra" className="hover:text-finance-dark transition-colors">Activités</a>
-            <a href="#projects" className="hover:text-finance-dark transition-colors">projects</a> */}
             <a href="#about" className="hover:text-finance-dark transition-colors">Home</a>
             <a href="#education" className="hover:text-finance-dark transition-colors">Education</a>
             <a href="#experience" className="hover:text-finance-dark transition-colors">Professional experiences</a>
