@@ -341,33 +341,58 @@ export default function App() {
         </div>
       </section>
 
-      {/* projects Section */}
-      <section id="projects" className="section-padding bg-finance-dark text-white">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeader 
-            title="Projects" 
-            subtitle="Application of my skills to real life projects." 
-            dark
-          />
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Modèle de Black-Scholes étendu",
-                desc: "Implémentation en C++ d'un moteur de pricing d'options avec intégration de la volatilité locale.",
-                tech: ["C++", "Numerical Methods"],
-                link: "#"
-              },
-              {
-                title: "Dashboard de Risque Temps Réel",
-                desc: "Application web visualisant l'exposition au risque d'un portefeuille d'actions via des APIs financières.",
-                tech: ["React", "Python", "WebSockets"],
-                link: "#"
-              }
-            ].map((project, i) => (
+      {/* Projets Section */}
+      <section id="projets" className="section-padding bg-finance-dark text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div className="flex-1">
+              <SectionHeader 
+                title="Projets & Réalisations" 
+                subtitle="Démonstration de compétences techniques à travers des projets concrets." 
+                dark
+              />
+            </div>
+            <div className="flex gap-4 mb-12 md:mb-0">
+              <button 
+                onClick={() => {
+                  const container = projectsRef.current;
+                  if (!container) return;
+                  if (container.scrollLeft < 200) {
+                    container.scrollLeft = container.scrollWidth / 3;
+                  }
+                  container.scrollBy({ left: -container.offsetWidth / 2, behavior: 'smooth' });
+                }}
+                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all text-white"
+                aria-label="Projet précédent"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button 
+                onClick={() => {
+                  const container = projectsRef.current;
+                  if (!container) return;
+                  if (container.scrollLeft > (container.scrollWidth * 2) / 3) {
+                    container.scrollLeft = container.scrollWidth / 3;
+                  }
+                  container.scrollBy({ left: container.offsetWidth / 2, behavior: 'smooth' });
+                }}
+                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all text-white"
+                aria-label="Projet suivant"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          </div>
+
+          <div 
+            ref={projectsRef}
+            className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-8 no-scrollbar"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {infiniteProjects.map((project, i) => (
               <motion.div 
                 key={i}
-                whileHover={{ scale: 1.02 }}
-                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex flex-col justify-between"
+                className="min-w-full md:min-w-[calc(50%-1rem)] snap-start p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 bg-finance-accent/20 rounded-lg flex items-center justify-center mb-6">
