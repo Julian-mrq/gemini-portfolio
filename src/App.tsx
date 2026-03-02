@@ -189,7 +189,7 @@ export default function App() {
           >
             <div className="w-72 h-96 rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl relative z-10">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" 
+                src="img/photo_CV2.png" 
                 alt="Profile" 
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
@@ -214,36 +214,35 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* education Section */}
+      {/* Education Section */}
       <section id="education" className="section-padding">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="education Académique" 
-            subtitle="Un double cursus exigeant alliant ingénierie et finance de marché." 
+            title="Education" 
+            subtitle="Double degree in engineering and finance to complete my academic background." 
           />
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
                 title: "Master in Finance",
-                school: "Grande École de Commerce",
-                period: "2024 — Présent",
+                school: "Université Paris Dauphine - PSL",
+                period: "Sept. 2025 — June 2028",
                 bullets: [
-                  "Spécialisation en Finance de Marché et Gestion d'Actifs",
-                  "Focus sur les produits dérivés et la gestion de portefeuille",
-                  "Modélisation stochastique appliquée aux marchés financiers"
+                  "Courses: corporate finance, financial analysis, modeling, business valuation, private equity",
+                  "Project: built full DCF and trading comps valuation models to assess Salesforce’s value"
                 ],
-                logo: "https://picsum.photos/seed/school1/100/100"
+                logo: "img/logo_dauphine.png"
               },
               {
-                title: "Diplôme d'Ingénieur",
-                school: "École Nationale Supérieure",
-                period: "2020 — 2024",
+                title: "Engineer degree",
+                school: "Université de Technologie de Troyes (UTT)",
+                period: "2020 — 2025",
                 bullets: [
-                  "Majeure Mathématiques Appliquées et Systèmes",
-                  "Mention Très Bien (Top 5% de la promotion)",
-                  "Expertise en algorithmique, optimisation et calcul scientifique"
+                  "Major in data science: machine and deep learning, statistics, data modeling",
+                  "Integrated preparatory classes: mathematics, physics, computer science",
+                  "Project: developed AI models to optimise option pricing, preprocessed and analysed data"
                 ],
-                logo: "https://picsum.photos/seed/school2/100/100"
+                logo: "img/logo_utt.png"
               }
             ].map((edu, i) => (
               <Card key={i} className="flex flex-col md:flex-row gap-6 items-start">
@@ -271,38 +270,41 @@ export default function App() {
         </div>
       </section>
 
-      {/* Expériences Section */}
+      {/* Professional experience section*/}
       <section id="experience" className="section-padding bg-slate-100/30">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Expériences Professionnelles" 
-            subtitle="Mise en pratique des compétences analytiques en milieu financier." 
+            title="Professional experiences" 
+            subtitle="My work experience in data science, finance and business analysis."
           />
           <div className="space-y-8">
             {[
               {
-                role: "Analyste Quantitatif (Stage)",
-                company: "Banque d'Investissement",
-                period: "Été 2024",
+                role: "Data Science Intern",
+                company: "BNP Paribas CIB",
+                period: "Feb. 2025 - July. 2025",
                 bullets: [
-                  "Développement d'outils de pricing pour options exotiques en C++",
-                  "Automatisation de rapports de risques via Python et SQL",
-                  "Collaboration quotidienne avec le desk de trading et les risk managers"
+                  "In the Tech department of Global Banking, I was in charge of developping models for strategic decision-making in the Corporate Credits division",
+                  "Built and optimised machine learning models to identify financial anomalies in credit data, increasing outlier detection by 90%",
+                  "Analysed around 400,000 credit data to extract key risk and financial insights from credit reports",
+                  "Presented monthly decks to senior management for strategic decision-making"
                 ],
-                logo: "https://picsum.photos/seed/bank/100/100",
-                skills: ["Python", "VBA", "Stochastic Calculus"]
+                logo: "img/logo_bnp.png",
+                skills: ["Python", "Excel", "SQL", "Data preprocessing", "Model optimisation"]
               },
               {
-                role: "Consultant Data Junior",
-                company: "Cabinet de Conseil Stratégique",
-                period: "2023",
+                role: "Strategy and Operations Intern",
+                company: "Pretto",
+                period: "July 2023 - Dec. 2023",
                 bullets: [
-                  "Analyse de données massives pour l'optimisation de processus industriels",
-                  "Création de modèles prédictifs et dashboards décisionnels sous Tableau",
-                  "Présentation des résultats stratégiques aux clients finaux"
+                  "I was the bridge between real estate brokers and the Tech team, in order to manager partnershipsp with banks and update the real estate market informations",
+                  "Analysed mortgage portfolios and client conversion for strategic decision-making",
+                  "Built KPI dashboards (Excel, Looker Studio) tracking sales and mortgage flows for top management",
+                  "Streamlined the company database (20M+ rows) using SQL improving reliability to nearly 100%",
+                  "Collaborated with banking partners to improve product positioning and customer offers"
                 ],
-                logo: "https://picsum.photos/seed/consulting/100/100",
-                skills: ["SQL", "Tableau", "Machine Learning"]
+                logo: "img/logo_pretto.png",
+                skills: ["SQL", "Excel", "Python", "Database restructuring"]
               }
             ].map((exp, i) => (
               <motion.div 
@@ -343,28 +345,33 @@ export default function App() {
         </div>
       </section>
 
-      {/* Activités Section */}
+      {/* Extracurricular Section */}
       <section id="extra" className="section-padding">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Activités Extrascolaires" 
-            subtitle="Engagement et leadership au-delà du cursus académique." 
+            title="Leadership experiences" 
+            subtitle="Engagement and leadership beyond the academic curriculum." 
           />
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Président Club Finance",
-                desc: "Gestion d'une association de 50 membres. Organisation de conférences avec des professionnels de la City et de Wall Street.",
+                title: "Junior Conseil UTT - Junior Entreprise",
+                desc: "Managed 6  Business Developers, created business strategies increasing client acquisition by 50%. Conducted client meetings and negotiations to secure new contracts worth €5,000. Performed market analysis, budgeting, performance reporting on commercial KPIs",
                 icon: <Trophy className="text-finance-blue" size={32} />
               },
               {
-                title: "Sport de Compétition",
-                desc: "Pratique intensive du Tennis en club. Participation à des tournois régionaux. Esprit d'équipe et résilience.",
+                title: "UTT Finance club",
+                desc: "Performed weekly macroeconomic and technical analysis, portfolio management, and newsletter writing",
                 icon: <Globe className="text-finance-blue" size={32} />
               },
               {
-                title: "Bénévolat",
-                desc: "Soutien scolaire en mathématiques pour des élèves en difficulté. Transmission de la passion pour les sciences.",
+                title: "Brigade de Sapeurs-Pompiers de Paris",
+                desc: "Trained in first aid, fire and military drills in fast-paced environments, volunteered in charity events like the Paris marathon, Journées du Patrimoine.",
+                icon: <User className="text-finance-blue" size={32} />
+              },
+              {
+                title: "Volunteering",
+                desc: "Volunteered in Le Chaînon Manquant, an association collecting unsold products to distribute them to people in the need.",
                 icon: <User className="text-finance-blue" size={32} />
               }
             ].map((item, i) => (
@@ -380,14 +387,14 @@ export default function App() {
         </div>
       </section>
 
-      {/* projects Section */}
+      {/* Projects Section */}
       <section id="projects" className="section-padding bg-finance-dark text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div className="flex-1">
               <SectionHeader 
-                title="projects & Réalisations" 
-                subtitle="Démonstration de compétences techniques à travers des projects concrets." 
+                title="Projects" 
+                subtitle="Application of my skills to real life projects." 
                 dark
               />
             </div>
@@ -402,7 +409,7 @@ export default function App() {
                   container.scrollBy({ left: -container.offsetWidth / 2, behavior: 'smooth' });
                 }}
                 className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all text-white"
-                aria-label="Projet précédent"
+                aria-label="Precedent project"
               >
                 <ChevronLeft size={24} />
               </button>
@@ -416,7 +423,7 @@ export default function App() {
                   container.scrollBy({ left: container.offsetWidth / 2, behavior: 'smooth' });
                 }}
                 className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all text-white"
-                aria-label="Projet suivant"
+                aria-label="Next project"
               >
                 <ChevronRight size={24} />
               </button>
@@ -448,7 +455,7 @@ export default function App() {
                   </div>
                 </div>
                 <a href={project.link} className="inline-flex items-center gap-2 text-finance-accent font-bold hover:text-white transition-colors">
-                  Voir le projet <ExternalLink size={16} />
+                  See the project <ExternalLink size={16} />
                 </a>
               </motion.div>
             ))}
@@ -460,8 +467,8 @@ export default function App() {
       <section id="contact" className="section-padding bg-finance-light/20">
         <div className="max-w-7xl mx-auto text-center">
           <SectionHeader 
-            title="Me Contacter" 
-            subtitle="N'hésitez pas à me rejoindre sur mes réseaux professionnels ou par email." 
+            title="Contact me" 
+            subtitle="Feel free to reach out !" 
           />
           
           <div className="flex flex-wrap justify-center gap-12 mt-12">
@@ -478,7 +485,7 @@ export default function App() {
 
             <motion.a 
               whileHover={{ y: -5 }}
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/julian-marques/" 
               target="_blank"
               className="flex flex-col items-center gap-4 group"
             >
@@ -490,7 +497,7 @@ export default function App() {
 
             <motion.a 
               whileHover={{ y: -5 }}
-              href="https://github.com" 
+              href="https://github.com/Julian-mrq" 
               target="_blank"
               className="flex flex-col items-center gap-4 group"
             >
@@ -513,11 +520,11 @@ export default function App() {
             <span className="font-bold text-lg tracking-tight text-finance-dark">PORTFOLIO</span>
           </div>
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Portfolio Professionnel. Tous droits réservés.
+            © {new Date().getFullYear()} Personal Portfolio. All Rights Reserved.
           </p>
           <div className="flex gap-8 text-sm font-bold text-slate-400">
-            <a href="#" className="hover:text-finance-dark transition-colors uppercase tracking-widest">LinkedIn</a>
-            <a href="#" className="hover:text-finance-dark transition-colors uppercase tracking-widest">GitHub</a>
+            <a href="https://www.linkedin.com/in/julian-marques/" className="hover:text-finance-dark transition-colors uppercase tracking-widest">LinkedIn</a>
+            <a href="https://github.com/Julian-mrq" className="hover:text-finance-dark transition-colors uppercase tracking-widest">GitHub</a>
           </div>
         </div>
       </footer>
