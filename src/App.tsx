@@ -106,11 +106,16 @@ export default function App() {
             <span className="font-bold text-xl tracking-tight text-finance-dark">PORTFOLIO</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-semibold text-finance-blue uppercase tracking-wider">
-            <a href="#about" className="hover:text-finance-dark transition-colors">Accueil</a>
-            <a href="#formation" className="hover:text-finance-dark transition-colors">Formation</a>
+            {/* <a href="#about" className="hover:text-finance-dark transition-colors">Accueil</a>
+            <a href="#education" className="hover:text-finance-dark transition-colors">education</a>
             <a href="#experience" className="hover:text-finance-dark transition-colors">Expériences</a>
             <a href="#extra" className="hover:text-finance-dark transition-colors">Activités</a>
-            <a href="#projets" className="hover:text-finance-dark transition-colors">Projets</a>
+            <a href="#projects" className="hover:text-finance-dark transition-colors">projects</a> */}
+            <a href="#about" className="hover:text-finance-dark transition-colors">Home</a>
+            <a href="#education" className="hover:text-finance-dark transition-colors">Education</a>
+            <a href="#experience" className="hover:text-finance-dark transition-colors">Professional experiences</a>
+            <a href="#extra" className="hover:text-finance-dark transition-colors">Extracurricular experiences</a>
+            <a href="#projects" className="hover:text-finance-dark transition-colors">Projects</a>
           </div>
           <a 
             href="#contact" 
@@ -143,24 +148,35 @@ export default function App() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl flex-1"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-finance-accent/20 border border-finance-accent/30 text-white text-xs font-bold uppercase tracking-widest mb-8">
-              Ingénieur & Expert Finance
-            </div>
+            
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-              L'Analyse <span className="text-finance-accent">Technique</span> au service de la <span className="text-finance-accent">Finance</span>
+              <span className="block text-finance-accent">Engineering</span>
+              <span className="block">x</span>
+              <span className="block text-finance-accent">Finance</span>
+              {/* L'Analyse <span className="text-finance-accent">Technique</span> au service de la <span className="text-finance-accent">Finance</span> */}
             </h1>
+            
             <p className="text-xl text-slate-200 mb-10 leading-relaxed font-light">
-              Diplômé en ingénierie et étudiant en Master Finance. 
-              Je combine rigueur mathématique et expertise financière pour modéliser 
-              les marchés de demain.
+              Portfolio of an engineering graduate specialized in data science, transitioning into corporate finance. Explore my professional experience, AI projects, and academic journey.
             </p>
             <div className="flex flex-wrap gap-5">
-              <a href="#formation" className="bg-white text-finance-dark px-8 py-4 rounded-xl font-bold hover:bg-finance-light transition-all flex items-center gap-2 shadow-xl">
-                Voir mon parcours <ChevronRight size={18} />
+              <a href="#education" className="bg-white text-finance-dark px-8 py-4 rounded-xl font-bold hover:bg-finance-light transition-all flex items-center gap-2 shadow-xl">
+                See my journey <ChevronRight size={18} />
               </a>
-              <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium cursor-pointer hover:bg-white/20 transition-all">
-                <FileText size={20} className="text-finance-accent" /> Télécharger CV
-              </div>
+              <a
+                href="../Julian_Marques_CV.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 px-6 py-4 rounded-xl 
+                bg-white/10 backdrop-blur-md border border-white/20 
+                text-white font-medium 
+                hover:bg-white/20 hover:scale-105 active:scale-95 
+                transition-all duration-300"
+              >
+                <FileText size={20} className="text-finance-accent" />
+                Download CV
+              </a>
             </div>
           </motion.div>
 
@@ -198,11 +214,11 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* Formation Section */}
-      <section id="formation" className="section-padding">
+      {/* education Section */}
+      <section id="education" className="section-padding">
         <div className="max-w-7xl mx-auto">
           <SectionHeader 
-            title="Formation Académique" 
+            title="education Académique" 
             subtitle="Un double cursus exigeant alliant ingénierie et finance de marché." 
           />
           <div className="grid md:grid-cols-2 gap-8">
@@ -364,14 +380,14 @@ export default function App() {
         </div>
       </section>
 
-      {/* Projets Section */}
-      <section id="projets" className="section-padding bg-finance-dark text-white overflow-hidden">
+      {/* projects Section */}
+      <section id="projects" className="section-padding bg-finance-dark text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div className="flex-1">
               <SectionHeader 
-                title="Projets & Réalisations" 
-                subtitle="Démonstration de compétences techniques à travers des projets concrets." 
+                title="projects & Réalisations" 
+                subtitle="Démonstration de compétences techniques à travers des projects concrets." 
                 dark
               />
             </div>
