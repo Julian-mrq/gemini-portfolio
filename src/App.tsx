@@ -109,7 +109,7 @@ export default function App() {
             <a href="#about" className="hover:text-finance-dark transition-colors">Home</a>
             <a href="#education" className="hover:text-finance-dark transition-colors">Education</a>
             <a href="#experience" className="hover:text-finance-dark transition-colors">Professional experiences</a>
-            <a href="#extra" className="hover:text-finance-dark transition-colors">Extracurricular experiences</a>
+            <a href="#extra" className="hover:text-finance-dark transition-colors">Leadership experiences</a>
             <a href="#projects" className="hover:text-finance-dark transition-colors">Projects</a>
           </div>
           <a 
@@ -231,7 +231,7 @@ export default function App() {
               {
                 title: "Engineer degree",
                 school: "Université de Technologie de Troyes (UTT)",
-                period: "2020 — 2025",
+                period: "Sept. 2020 — Aug. 2025",
                 bullets: [
                   "Major in data science: machine and deep learning, statistics, data modeling",
                   "Integrated preparatory classes: mathematics, physics, computer science",
@@ -279,13 +279,13 @@ export default function App() {
                 company: "BNP Paribas CIB",
                 period: "Feb. 2025 - July. 2025",
                 bullets: [
-                  "<strong>In the Tech department of Global Banking, I was in charge of developping models for strategic decision-making in the Corporate Credits division</strong>",
+                  "In the Tech department of Global Banking, I was in charge of developping models for strategic decision-making in the Corporate Credits division",
                   "Built and optimised machine learning models to identify financial anomalies in credit data, increasing outlier detection by 90%",
                   "Analysed around 400,000 credit data to extract key risk and financial insights from credit reports",
                   "Presented monthly decks to senior management for strategic decision-making"
                 ],
                 logo: "img/logo_bnp.png",
-                skills: ["Python", "Excel", "SQL", "Data preprocessing", "Model optimisation"]
+                skills: ["Python", "Machine Learning", "Model optimisation", "SQL", "Data preprocessing"]
               },
               {
                 role: "Strategy and Operations Intern",
