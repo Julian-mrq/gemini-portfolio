@@ -469,7 +469,7 @@ export default function App() {
           <div className="flex flex-wrap justify-center gap-12 mt-12">
             <motion.a 
               whileHover={{ y: -5 }}
-              href="julmarques.jm@gmail.com" 
+              href="mailto:julmarques.jm@gmail.com" 
               className="flex flex-col items-center gap-4 group"
             >
               <div className="w-24 h-24 rounded-3xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-finance-blue group-hover:text-finance-dark group-hover:border-finance-accent transition-all group-hover:shadow-xl group-hover:shadow-finance-dark/5">
