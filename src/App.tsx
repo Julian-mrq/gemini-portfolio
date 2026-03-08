@@ -279,7 +279,7 @@ export default function App() {
                 company: "BNP Paribas CIB",
                 period: "Feb. 2025 - July. 2025",
                 bullets: [
-                  "In the Tech department of Global Banking, I was in charge of developping models for strategic decision-making in the Corporate Credits division",
+                  "In the Tech department of Global Banking, I was in charge of developing models for strategic decision-making in the Corporate Credits division",
                   "Built and optimised machine learning models to identify financial anomalies in credit data, increasing outlier detection by 90%",
                   "Analysed around 400,000 credit data to extract key risk and financial insights from credit reports",
                   "Presented monthly decks to senior management for strategic decision-making"
@@ -292,7 +292,7 @@ export default function App() {
                 company: "Pretto",
                 period: "July 2023 - Dec. 2023",
                 bullets: [
-                  "I was the bridge between real estate brokers and the Tech team, in order to manager partnershipsp with banks and update the real estate market informations",
+                  "I was the bridge between real estate brokers and the Tech team, in order to manage partnerships with banks and update the real estate market information",
                   "Analysed mortgage portfolios and client conversion for strategic decision-making",
                   "Built KPI dashboards (Excel, Looker Studio) tracking sales and mortgage flows for top management",
                   "Streamlined the company database (20M+ rows) using SQL improving reliability to nearly 100%",
@@ -469,7 +469,7 @@ export default function App() {
           <div className="flex flex-wrap justify-center gap-12 mt-12">
             <motion.a 
               whileHover={{ y: -5 }}
-              href="mailto:contact@example.com" 
+              href="julmarques.jm@gmail.com" 
               className="flex flex-col items-center gap-4 group"
             >
               <div className="w-24 h-24 rounded-3xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-finance-blue group-hover:text-finance-dark group-hover:border-finance-accent transition-all group-hover:shadow-xl group-hover:shadow-finance-dark/5">
